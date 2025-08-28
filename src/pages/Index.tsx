@@ -176,17 +176,17 @@ export default function Index() {
                 <div className="flex items-center justify-start gap-2 sm:gap-3 pt-2 sm:pt-3">
                   <button
                     onClick={prevFeature}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Previous feature"
                   >
-                    <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                    <ChevronLeft className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
                   </button>
                   <button
                     onClick={nextFeature}
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
+                    className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Next feature"
                   >
-                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
+                    <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 text-gray-600" />
                   </button>
                 </div>
               </div>
