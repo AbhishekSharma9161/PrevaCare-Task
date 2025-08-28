@@ -203,7 +203,7 @@ export default function Index() {
                   {/* Screen bezel - thicker darker border */}
                   <div className="absolute inset-[4px] bg-black rounded-[44px]">
                     {/* Screen area with notch cutout */}
-                    <div className={`absolute inset-[3px] bg-gradient-to-br ${currentFeature.gradient} rounded-[41px] overflow-hidden transition-all duration-700 ease-in-out`}>
+                    <div className={`absolute inset-[3px] bg-gradient-to-br ${currentFeature.gradient} rounded-[41px] overflow-hidden transition-all duration-700 ease-in-out flex flex-col`}>
 
                       {/* iPhone Notch - thinner height */}
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-black rounded-b-2xl">
