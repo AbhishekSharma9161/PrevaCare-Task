@@ -148,7 +148,7 @@ export default function Index() {
           <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center">
             
             {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
-            <div className="order-2 md:order-1 lg:order-1 col-span-1 md:col-span-1 lg:col-span-1">
+            <div className="order-1 col-span-1">
               <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {/* Enhanced Text Section */}
                 <div className="space-y-3 sm:space-y-4 lg:space-y-6">
