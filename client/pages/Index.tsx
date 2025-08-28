@@ -200,17 +200,17 @@ export default function Index() {
                   {/* Metallic shine effect on frame */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-black/30 rounded-[48px]"></div>
 
-                  {/* Screen bezel - darker border */}
-                  <div className="absolute inset-[2px] bg-black rounded-[46px]">
+                  {/* Screen bezel - thicker darker border */}
+                  <div className="absolute inset-[4px] bg-black rounded-[44px]">
                     {/* Screen area with notch cutout */}
-                    <div className={`absolute inset-[2px] bg-gradient-to-br ${currentFeature.gradient} rounded-[44px] overflow-hidden transition-all duration-700 ease-in-out`}>
+                    <div className={`absolute inset-[3px] bg-gradient-to-br ${currentFeature.gradient} rounded-[41px] overflow-hidden transition-all duration-700 ease-in-out`}>
 
-                      {/* iPhone Notch - matching reference image */}
-                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-black rounded-b-2xl">
+                      {/* iPhone Notch - thinner height */}
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-black rounded-b-2xl">
                         {/* Speaker */}
-                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-700 rounded-full"></div>
+                        <div className="absolute top-1.5 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-gray-700 rounded-full"></div>
                         {/* Front camera - lighter/less black */}
-                        <div className="absolute top-2 right-4 w-2 h-2 bg-gray-600 rounded-full"></div>
+                        <div className="absolute top-1.5 right-4 w-1.5 h-1.5 bg-gray-600 rounded-full"></div>
                       </div>
 
                       {/* Screen reflection effect */}
