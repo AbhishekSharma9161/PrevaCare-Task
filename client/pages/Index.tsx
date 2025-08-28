@@ -193,8 +193,8 @@ export default function Index() {
             </div>
 
             {/* Center Column - Perfect iPhone Design matching reference */}
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative transform scale-75 sm:scale-90 md:scale-95 lg:scale-100">
+            <div className="order-1 md:order-2 lg:order-2 col-span-1 md:col-span-1 lg:col-span-1 flex justify-center">
+              <div className="relative transform scale-[0.6] xs:scale-75 sm:scale-85 md:scale-90 lg:scale-95 xl:scale-100">
                 {/* iPhone Frame - Exact replica of reference image */}
                 <div className="relative w-[288px] h-[588px] bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[48px] shadow-2xl">
                   {/* Metallic shine effect on frame */}
