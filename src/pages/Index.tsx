@@ -251,23 +251,23 @@ export default function Index() {
                     <button
                       key={feature.id}
                       onClick={() => setActiveFeature(index)}
-                      className={`w-full text-left p-2 sm:p-3 md:p-4 rounded-lg transition-all duration-200 ${
+                      className={`w-full text-left p-1.5 sm:p-2 md:p-3 rounded-md transition-all duration-200 ${
                         activeFeature === index
                           ? 'bg-blue-50 border border-blue-200'
                           : 'hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-2 sm:gap-3">
-                        <div className={`w-1 h-6 sm:h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
+                      <div className="flex items-center gap-1 sm:gap-2">
+                        <div className={`w-0.5 sm:w-1 h-4 sm:h-6 md:h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
                           activeFeature === index ? 'bg-blue-500' : 'bg-gray-200'
                         }`}></div>
                         <div className="min-w-0 flex-1">
-                          <div className={`font-semibold text-xs sm:text-sm md:text-base transition-colors ${
+                          <div className={`font-semibold text-[10px] sm:text-xs md:text-sm transition-colors ${
                             activeFeature === index ? 'text-blue-600' : 'text-gray-900'
                           }`}>
                             Feature {feature.id}
                           </div>
-                          <div className="text-xs sm:text-sm text-gray-500 truncate mt-0.5 sm:mt-1">
+                          <div className="text-[8px] sm:text-xs text-gray-500 truncate mt-0.5">
                             {feature.description}
                           </div>
                         </div>
