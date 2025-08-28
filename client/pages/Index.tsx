@@ -196,21 +196,21 @@ export default function Index() {
             <div className="order-1 lg:order-2 flex justify-center">
               <div className="relative transform scale-75 sm:scale-90 md:scale-95 lg:scale-100">
                 {/* iPhone Frame - Exact replica of reference image */}
-                <div className="relative w-[288px] h-[588px] bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-[48px] shadow-2xl">
+                <div className="relative w-[288px] h-[588px] bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[48px] shadow-2xl">
                   {/* Metallic shine effect on frame */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/20 rounded-[48px]"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-black/30 rounded-[48px]"></div>
 
-                  {/* Screen bezel */}
-                  <div className="absolute inset-[3px] bg-black rounded-[45px]">
+                  {/* Screen bezel - darker border */}
+                  <div className="absolute inset-[2px] bg-black rounded-[46px]">
                     {/* Screen area with notch cutout */}
-                    <div className={`absolute inset-[2px] bg-gradient-to-br ${currentFeature.gradient} rounded-[43px] overflow-hidden transition-all duration-700 ease-in-out`}>
+                    <div className={`absolute inset-[2px] bg-gradient-to-br ${currentFeature.gradient} rounded-[44px] overflow-hidden transition-all duration-700 ease-in-out`}>
 
                       {/* iPhone Notch - matching reference image */}
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-black rounded-b-2xl">
                         {/* Speaker */}
-                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-800 rounded-full"></div>
-                        {/* Front camera */}
-                        <div className="absolute top-2 right-4 w-2 h-2 bg-gray-900 rounded-full"></div>
+                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-700 rounded-full"></div>
+                        {/* Front camera - lighter/less black */}
+                        <div className="absolute top-2 right-4 w-2 h-2 bg-gray-600 rounded-full"></div>
                       </div>
 
                       {/* Screen reflection effect */}
