@@ -143,26 +143,29 @@ export default function Index() {
 
   return (
     <div ref={containerRef} className="min-h-[300vh] bg-gray-50">
-      <div className="sticky top-0 h-screen flex items-center justify-center p-4 lg:p-8">
-        <div className="w-full max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+      <div className="sticky top-0 h-screen flex items-center justify-center p-2 sm:p-4 lg:p-6 xl:p-8">
+        <div className="w-full max-w-[90rem] mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-start lg:items-center">
             
-            {/* Left Column - Heading, Body Text, and Fixed Arrows */}
+            {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
             <div className="order-2 lg:order-1">
-              <div className="min-h-[400px] flex flex-col justify-between">
-                <div className="space-y-6">
+              <div className="space-y-6 lg:space-y-8">
+                {/* Enhanced Text Section */}
+                <div className="space-y-4 lg:space-y-6">
                   <div>
-                    <div className="text-sm font-medium text-blue-500 mb-2">
+                    <div className="text-xs sm:text-sm font-semibold text-blue-600 mb-2 tracking-wide uppercase">
                       Feature No.{currentFeature.id} -
                     </div>
-                    <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                    <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight tracking-tight">
                       {currentFeature.title}
                     </h1>
-                    <ul className="space-y-3 text-gray-600">
+                    <ul className="space-y-3 lg:space-y-4 text-gray-700">
                       {currentFeature.details.map((detail, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-sm leading-relaxed">{detail}</span>
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                          <span className="text-sm sm:text-base leading-relaxed font-medium">
+                            {detail}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -170,17 +173,17 @@ export default function Index() {
                 </div>
                 
                 {/* Fixed Navigation Arrows */}
-                <div className="flex items-center gap-4 pt-6">
+                <div className="flex items-center gap-3 pt-4">
                   <button
                     onClick={prevFeature}
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-400 transition-colors flex-shrink-0"
+                    className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Previous feature"
                   >
                     <ChevronLeft className="w-5 h-5 text-gray-600" />
                   </button>
                   <button
                     onClick={nextFeature}
-                    className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:border-gray-400 transition-colors flex-shrink-0"
+                    className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Next feature"
                   >
                     <ChevronRight className="w-5 h-5 text-gray-600" />
@@ -189,54 +192,52 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Center Column - Enhanced iPhone Design */}
+            {/* Center Column - Perfect iPhone Design matching reference */}
             <div className="order-1 lg:order-2 flex justify-center">
-              <div className="relative">
-                {/* iPhone outer frame with enhanced styling */}
-                <div className="relative w-72 h-[580px] bg-gradient-to-b from-gray-800 to-black rounded-[3rem] p-1 shadow-2xl">
-                  {/* Inner frame for more realistic depth */}
-                  <div className="w-full h-full bg-black rounded-[2.8rem] p-1">
+              <div className="relative transform scale-75 sm:scale-90 md:scale-95 lg:scale-100">
+                {/* iPhone Frame - Exact replica of reference image */}
+                <div className="relative w-[288px] h-[588px] bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-[48px] shadow-2xl">
+                  {/* Metallic shine effect on frame */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/20 rounded-[48px]"></div>
+                  
+                  {/* Screen bezel */}
+                  <div className="absolute inset-[3px] bg-black rounded-[45px]">
                     {/* Screen area */}
-                    <div className={`w-full h-full bg-gradient-to-br ${currentFeature.gradient} rounded-[2.5rem] relative overflow-hidden transition-all duration-700 ease-in-out`}>
+                    <div className={`absolute inset-[2px] bg-gradient-to-br ${currentFeature.gradient} rounded-[43px] overflow-hidden transition-all duration-700 ease-in-out`}>
                       
-                      {/* Enhanced iPhone camera area (not notch) */}
-                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex items-center gap-2">
-                        {/* Speaker */}
-                        <div className="w-12 h-1 bg-black/40 rounded-full"></div>
-                        {/* Front camera */}
-                        <div className="w-3 h-3 bg-black/60 rounded-full border border-black/20"></div>
-                      </div>
+                      {/* Simple front camera (no notch, just like reference) */}
+                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black/60 rounded-full border border-black/30"></div>
                       
                       {/* Screen reflection effect */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-[2.5rem]"></div>
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent rounded-[43px]"></div>
                       
                       {/* Content area */}
-                      <div className="pt-16 pb-8 px-6 h-full">
+                      <div className="pt-16 pb-8 px-6 h-full relative z-10">
                         <div className="text-white">
                           <div className="text-xs font-medium mb-2 opacity-80">
                             Feature No.{currentFeature.id}
                           </div>
-                          <h3 className="text-lg font-bold mb-4 leading-tight">
+                          <h3 className="text-lg font-bold leading-tight">
                             {currentFeature.title}
                           </h3>
                         </div>
                       </div>
                       
                       {/* Home indicator */}
-                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/30 rounded-full"></div>
+                      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/40 rounded-full"></div>
                     </div>
                   </div>
                   
-                  {/* Enhanced reflection/shine effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent rounded-[3rem] pointer-events-none"></div>
+                  {/* Additional frame shine */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-[48px] transform rotate-45"></div>
                 </div>
               </div>
             </div>
 
             {/* Right Column - Feature Showcase List */}
             <div className="order-3 lg:order-3">
-              <div className="bg-white rounded-lg border border-gray-200 p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-6">
+              <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 shadow-sm max-w-sm lg:max-w-none mx-auto lg:mx-0">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
                   Feature Showcase
                 </h3>
                 
@@ -245,23 +246,23 @@ export default function Index() {
                     <button
                       key={feature.id}
                       onClick={() => setActiveFeature(index)}
-                      className={`w-full text-left p-3 rounded transition-all duration-200 ${
+                      className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-200 ${
                         activeFeature === index
-                          ? 'bg-blue-50 border border-blue-100'
+                          ? 'bg-blue-50 border border-blue-200'
                           : 'hover:bg-gray-50'
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`w-1 h-8 rounded-full transition-all duration-300 ${
+                        <div className={`w-1 h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
                           activeFeature === index ? 'bg-blue-500' : 'bg-gray-200'
                         }`}></div>
                         <div className="min-w-0 flex-1">
-                          <div className={`font-medium text-sm transition-colors ${
+                          <div className={`font-semibold text-sm sm:text-base transition-colors ${
                             activeFeature === index ? 'text-blue-600' : 'text-gray-900'
                           }`}>
                             Feature {feature.id}
                           </div>
-                          <div className="text-xs text-gray-500 truncate">
+                          <div className="text-xs sm:text-sm text-gray-500 truncate mt-1">
                             {feature.description}
                           </div>
                         </div>
