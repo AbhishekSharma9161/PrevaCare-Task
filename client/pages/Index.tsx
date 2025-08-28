@@ -240,34 +240,34 @@ export default function Index() {
             </div>
 
             {/* Right Column - Feature Showcase List */}
-            <div className="order-3 lg:order-3">
-              <div className="bg-white rounded-xl border border-gray-200 p-4 sm:p-6 shadow-sm max-w-sm lg:max-w-none mx-auto lg:mx-0">
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4 sm:mb-6">
+            <div className="order-3 md:order-3 lg:order-3 col-span-1 md:col-span-2 lg:col-span-1">
+              <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 md:p-6 shadow-sm max-w-md md:max-w-none mx-auto">
+                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 md:mb-6">
                   Feature Showcase
                 </h3>
-                
-                <div className="space-y-1">
+
+                <div className="space-y-1 md:grid md:grid-cols-2 lg:block md:gap-2 lg:space-y-1">
                   {features.map((feature, index) => (
                     <button
                       key={feature.id}
                       onClick={() => setActiveFeature(index)}
-                      className={`w-full text-left p-3 sm:p-4 rounded-lg transition-all duration-200 ${
+                      className={`w-full text-left p-2 sm:p-3 md:p-4 rounded-lg transition-all duration-200 ${
                         activeFeature === index
                           ? 'bg-blue-50 border border-blue-200'
                           : 'hover:bg-gray-50'
                       }`}
                     >
-                      <div className="flex items-center gap-3">
-                        <div className={`w-1 h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <div className={`w-1 h-6 sm:h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
                           activeFeature === index ? 'bg-blue-500' : 'bg-gray-200'
                         }`}></div>
                         <div className="min-w-0 flex-1">
-                          <div className={`font-semibold text-sm sm:text-base transition-colors ${
+                          <div className={`font-semibold text-xs sm:text-sm md:text-base transition-colors ${
                             activeFeature === index ? 'text-blue-600' : 'text-gray-900'
                           }`}>
                             Feature {feature.id}
                           </div>
-                          <div className="text-xs sm:text-sm text-gray-500 truncate mt-1">
+                          <div className="text-xs sm:text-sm text-gray-500 truncate mt-0.5 sm:mt-1">
                             {feature.description}
                           </div>
                         </div>
