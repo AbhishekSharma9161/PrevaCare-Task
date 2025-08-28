@@ -45,18 +45,20 @@ public/               # Static assets
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm, yarn, or pnpm
 
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <your-repo-url>
    cd feature-showcase
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    # or
@@ -66,6 +68,7 @@ public/               # Static assets
    ```
 
 3. **Start development server**
+
    ```bash
    npm run dev
    # or
@@ -102,6 +105,7 @@ The application is built with a mobile-first approach and includes:
 ### Adding New Features
 
 1. **Update the features array** in `src/pages/Index.tsx`:
+
    ```typescript
    const features = [
      {
@@ -143,13 +147,14 @@ The built files in `dist/` can be deployed to any static hosting service.
 ## 🔍 Key Implementation Details
 
 ### Scroll-Based Auto-Advance
+
 ```typescript
 useEffect(() => {
   const handleScroll = () => {
     const scrollPercent = scrollTop / (docHeight - windowHeight);
     const featureIndex = Math.min(
       Math.floor(scrollPercent * features.length * 1.2),
-      features.length - 1
+      features.length - 1,
     );
     setActiveFeature(featureIndex);
   };
@@ -158,18 +163,20 @@ useEffect(() => {
 ```
 
 ### Responsive iPhone Mockup
+
 - SVG-based design for crisp rendering
 - CSS transforms for proper scaling
 - Dynamic gradient backgrounds
 - Realistic notch and home indicator
 
 ### Mobile-First Grid System
+
 ```css
 /* Single column on mobile */
-grid-cols-1 
+grid-cols-1
 
 /* Two columns on medium screens */
-md:grid-cols-2 
+md:grid-cols-2
 
 /* Three columns on large screens */
 lg:grid-cols-3
@@ -183,16 +190,18 @@ lg:grid-cols-3
 ✅ **Scroll Behavior**: Auto-advance features 1→5 with scroll  
 ✅ **Sticky Section**: Feature showcase stays in view  
 ✅ **Mobile Responsive**: Optimized for all screen sizes  
-✅ **Clean Code**: Well-structured React components with TypeScript  
+✅ **Clean Code**: Well-structured React components with TypeScript
 
 ## 🐛 Troubleshooting
 
 ### Development Server Issues
+
 - Ensure port 8080 is not in use
 - Clear browser cache if styles don't update
 - Restart dev server if hot reload stops working
 
 ### Build Issues
+
 - Run `npm run typecheck` to catch TypeScript errors
 - Check console for missing dependencies
 - Verify all imports are correct after restructuring

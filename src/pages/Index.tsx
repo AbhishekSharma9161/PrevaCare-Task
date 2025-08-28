@@ -17,12 +17,12 @@ const features: Feature[] = [
     details: [
       "Dynamic font loading with web font optimization for better performance",
       "Advanced text styling with custom typography scales and spacing",
-      "Multi-language support with proper character rendering and RTL layouts", 
+      "Multi-language support with proper character rendering and RTL layouts",
       "Responsive text sizing that adapts perfectly to all screen sizes",
       "Accessibility-focused text contrast and readability optimization",
-      "Custom font fallbacks and graceful degradation for older browsers"
+      "Custom font fallbacks and graceful degradation for older browsers",
     ],
-    gradient: "from-pink-500 via-purple-500 to-indigo-500"
+    gradient: "from-pink-500 via-purple-500 to-indigo-500",
   },
   {
     id: 2,
@@ -30,13 +30,13 @@ const features: Feature[] = [
     description: "Seamless experience across all devices",
     details: [
       "Fluid grid systems that adapt seamlessly to any screen size",
-      "Touch-friendly interfaces optimized for mobile and tablet interactions", 
+      "Touch-friendly interfaces optimized for mobile and tablet interactions",
       "Flexible layouts that maintain visual hierarchy across all devices",
       "Consistent user experience with adaptive navigation patterns",
       "Performance optimized for various device capabilities and connection speeds",
-      "Progressive enhancement ensuring functionality on all browsers"
+      "Progressive enhancement ensuring functionality on all browsers",
     ],
-    gradient: "from-emerald-500 via-teal-500 to-cyan-500"
+    gradient: "from-emerald-500 via-teal-500 to-cyan-500",
   },
   {
     id: 3,
@@ -48,9 +48,9 @@ const features: Feature[] = [
       "Intuitive navigation patterns with gesture-based controls",
       "Dynamic content updates without requiring page reloads",
       "Accessible interactive components designed for all users",
-      "Hardware-accelerated animations for buttery smooth performance"
+      "Hardware-accelerated animations for buttery smooth performance",
     ],
-    gradient: "from-orange-500 via-red-500 to-pink-500"
+    gradient: "from-orange-500 via-red-500 to-pink-500",
   },
   {
     id: 4,
@@ -62,9 +62,9 @@ const features: Feature[] = [
       "Efficient state management with optimized React rendering patterns",
       "Image optimization with next-gen formats and responsive loading",
       "Database query optimization with intelligent data fetching",
-      "Memory management and cleanup for long-running applications"
+      "Memory management and cleanup for long-running applications",
     ],
-    gradient: "from-violet-500 via-purple-500 to-fuchsia-500"
+    gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
   },
   {
     id: 5,
@@ -76,10 +76,10 @@ const features: Feature[] = [
       "High contrast mode with customizable color themes for better visibility",
       "Intelligent focus management with proper tab order and focus indicators",
       "Semantic HTML structure optimized for SEO and assistive technologies",
-      "WCAG 2.1 AA compliance with regular accessibility auditing and testing"
+      "WCAG 2.1 AA compliance with regular accessibility auditing and testing",
     ],
-    gradient: "from-blue-500 via-indigo-500 to-purple-500"
-  }
+    gradient: "from-blue-500 via-indigo-500 to-purple-500",
+  },
 ];
 
 export default function Index() {
@@ -92,39 +92,39 @@ export default function Index() {
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
-      
+
       setIsScrolling(true);
-      
+
       // Clear existing timeout
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
-      
+
       // Calculate scroll progress
       const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
       const scrollPercent = scrollTop / (docHeight - windowHeight);
-      
+
       // Map scroll progress to features (0-1 maps to 0-4 features)
       const featureIndex = Math.min(
         Math.floor(scrollPercent * features.length * 1.2), // Slightly faster progression
-        features.length - 1
+        features.length - 1,
       );
-      
+
       if (featureIndex !== activeFeature) {
         setActiveFeature(featureIndex);
       }
-      
+
       // Reset scrolling state after scroll ends
       scrollTimeoutRef.current = setTimeout(() => {
         setIsScrolling(false);
       }, 150);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       if (scrollTimeoutRef.current) {
         clearTimeout(scrollTimeoutRef.current);
       }
@@ -146,7 +146,6 @@ export default function Index() {
       <div className="sticky top-0 h-screen flex items-center justify-center p-1 sm:p-2 md:p-4 lg:p-6 xl:p-8">
         <div className="w-full max-w-[95rem] mx-auto">
           <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center">
-            
             {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
             <div className="order-1 col-span-1">
               <div className="space-y-2 sm:space-y-4 lg:space-y-6">
@@ -160,14 +159,19 @@ export default function Index() {
                       {currentFeature.title}
                     </h1>
                     <ul className="space-y-1 sm:space-y-2 lg:space-y-3 text-gray-700">
-                      {currentFeature.details.slice(0, 4).map((detail, index) => (
-                        <li key={index} className="flex items-start gap-1 sm:gap-2">
-                          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mt-1 sm:mt-1.5 flex-shrink-0"></div>
-                          <span className="text-[10px] sm:text-xs md:text-sm leading-tight font-medium">
-                            {detail}
-                          </span>
-                        </li>
-                      ))}
+                      {currentFeature.details
+                        .slice(0, 4)
+                        .map((detail, index) => (
+                          <li
+                            key={index}
+                            className="flex items-start gap-1 sm:gap-2"
+                          >
+                            <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mt-1 sm:mt-1.5 flex-shrink-0"></div>
+                            <span className="text-[10px] sm:text-xs md:text-sm leading-tight font-medium">
+                              {detail}
+                            </span>
+                          </li>
+                        ))}
                     </ul>
                   </div>
                 </div>
@@ -203,8 +207,9 @@ export default function Index() {
                   {/* Screen bezel - thicker darker border */}
                   <div className="absolute inset-[4px] bg-black rounded-[44px]">
                     {/* Screen area with notch cutout */}
-                    <div className={`absolute inset-[3px] bg-gradient-to-br ${currentFeature.gradient} rounded-[41px] overflow-hidden transition-all duration-700 ease-in-out flex flex-col`}>
-
+                    <div
+                      className={`absolute inset-[3px] bg-gradient-to-br ${currentFeature.gradient} rounded-[41px] overflow-hidden transition-all duration-700 ease-in-out flex flex-col`}
+                    >
                       {/* iPhone Notch - thinner height */}
                       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-5 bg-black rounded-b-2xl">
                         {/* Speaker */}
@@ -253,18 +258,26 @@ export default function Index() {
                       onClick={() => setActiveFeature(index)}
                       className={`w-full text-left p-1.5 sm:p-2 md:p-3 rounded-md transition-all duration-200 ${
                         activeFeature === index
-                          ? 'bg-blue-50 border border-blue-200'
-                          : 'hover:bg-gray-50'
+                          ? "bg-blue-50 border border-blue-200"
+                          : "hover:bg-gray-50"
                       }`}
                     >
                       <div className="flex items-center gap-1 sm:gap-2">
-                        <div className={`w-0.5 sm:w-1 h-4 sm:h-6 md:h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
-                          activeFeature === index ? 'bg-blue-500' : 'bg-gray-200'
-                        }`}></div>
+                        <div
+                          className={`w-0.5 sm:w-1 h-4 sm:h-6 md:h-8 rounded-full transition-all duration-300 flex-shrink-0 ${
+                            activeFeature === index
+                              ? "bg-blue-500"
+                              : "bg-gray-200"
+                          }`}
+                        ></div>
                         <div className="min-w-0 flex-1">
-                          <div className={`font-semibold text-[10px] sm:text-xs md:text-sm transition-colors ${
-                            activeFeature === index ? 'text-blue-600' : 'text-gray-900'
-                          }`}>
+                          <div
+                            className={`font-semibold text-[10px] sm:text-xs md:text-sm transition-colors ${
+                              activeFeature === index
+                                ? "text-blue-600"
+                                : "text-gray-900"
+                            }`}
+                          >
                             Feature {feature.id}
                           </div>
                           <div className="text-[8px] sm:text-xs text-gray-500 truncate mt-0.5">
