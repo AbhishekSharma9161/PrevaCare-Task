@@ -143,9 +143,9 @@ export default function Index() {
 
   return (
     <div ref={containerRef} className="min-h-[300vh] bg-gray-50">
-      <div className="sticky top-0 h-screen flex items-center justify-center p-2 sm:p-4 lg:p-6 xl:p-8">
-        <div className="w-full max-w-[90rem] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-12 items-start lg:items-center">
+      <div className="sticky top-0 h-screen flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12">
+        <div className="w-full max-w-[95rem] mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
             
             {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
             <div className="order-2 lg:order-1">
