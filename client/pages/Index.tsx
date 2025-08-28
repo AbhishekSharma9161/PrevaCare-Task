@@ -148,22 +148,22 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 items-center">
             
             {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
-            <div className="order-2 lg:order-1">
-              <div className="space-y-6 lg:space-y-8">
+            <div className="order-2 md:order-1 lg:order-1 col-span-1 md:col-span-1 lg:col-span-1">
+              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
                 {/* Enhanced Text Section */}
-                <div className="space-y-4 lg:space-y-6">
+                <div className="space-y-3 sm:space-y-4 lg:space-y-6">
                   <div>
                     <div className="text-xs sm:text-sm font-semibold text-blue-600 mb-2 tracking-wide uppercase">
                       Feature No.{currentFeature.id} -
                     </div>
-                    <h1 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4 lg:mb-6 leading-tight tracking-tight">
+                    <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight tracking-tight">
                       {currentFeature.title}
                     </h1>
-                    <ul className="space-y-3 lg:space-y-4 text-gray-700">
+                    <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-gray-700">
                       {currentFeature.details.map((detail, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-sm sm:text-base leading-relaxed font-medium">
+                        <li key={index} className="flex items-start gap-2 sm:gap-3">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
+                          <span className="text-xs sm:text-sm md:text-base leading-relaxed font-medium">
                             {detail}
                           </span>
                         </li>
@@ -171,22 +171,22 @@ export default function Index() {
                     </ul>
                   </div>
                 </div>
-                
+
                 {/* Fixed Navigation Arrows */}
-                <div className="flex items-center gap-3 pt-4">
+                <div className="flex items-center justify-center md:justify-start gap-3 pt-3 sm:pt-4">
                   <button
                     onClick={prevFeature}
-                    className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Previous feature"
                   >
-                    <ChevronLeft className="w-5 h-5 text-gray-600" />
+                    <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                   </button>
                   <button
                     onClick={nextFeature}
-                    className="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
                     aria-label="Next feature"
                   >
-                    <ChevronRight className="w-5 h-5 text-gray-600" />
+                    <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                   </button>
                 </div>
               </div>
