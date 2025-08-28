@@ -217,7 +217,7 @@ export default function Index() {
                       <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent rounded-[43px]"></div>
 
                       {/* Content area */}
-                      <div className="pt-16 pb-8 px-6 h-full relative z-10">
+                      <div className="pt-16 pb-8 px-6 h-full relative z-10 flex flex-col justify-start items-center">
                         <div className="text-white">
                           <div className="text-xs font-medium mb-2 opacity-80">
                             Feature No.{currentFeature.id}
