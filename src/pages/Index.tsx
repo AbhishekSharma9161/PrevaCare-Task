@@ -149,21 +149,21 @@ export default function Index() {
             
             {/* Left Column - Enhanced Text Styling and Fixed Arrows */}
             <div className="order-1 col-span-1">
-              <div className="space-y-4 sm:space-y-6 lg:space-y-8">
+              <div className="space-y-2 sm:space-y-4 lg:space-y-6">
                 {/* Enhanced Text Section */}
-                <div className="space-y-3 sm:space-y-4 lg:space-y-6">
+                <div className="space-y-2 sm:space-y-3 lg:space-y-4">
                   <div>
-                    <div className="text-xs sm:text-sm font-semibold text-blue-600 mb-2 tracking-wide uppercase">
+                    <div className="text-[10px] sm:text-xs font-semibold text-blue-600 mb-1 tracking-wide uppercase">
                       Feature No.{currentFeature.id} -
                     </div>
-                    <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 lg:mb-6 leading-tight tracking-tight">
+                    <h1 className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-gray-900 mb-2 sm:mb-3 lg:mb-4 leading-tight tracking-tight">
                       {currentFeature.title}
                     </h1>
-                    <ul className="space-y-2 sm:space-y-3 lg:space-y-4 text-gray-700">
-                      {currentFeature.details.map((detail, index) => (
-                        <li key={index} className="flex items-start gap-2 sm:gap-3">
-                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                          <span className="text-xs sm:text-sm md:text-base leading-relaxed font-medium">
+                    <ul className="space-y-1 sm:space-y-2 lg:space-y-3 text-gray-700">
+                      {currentFeature.details.slice(0, 4).map((detail, index) => (
+                        <li key={index} className="flex items-start gap-1 sm:gap-2">
+                          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-blue-500 rounded-full mt-1 sm:mt-1.5 flex-shrink-0"></div>
+                          <span className="text-[10px] sm:text-xs md:text-sm leading-tight font-medium">
                             {detail}
                           </span>
                         </li>
@@ -173,7 +173,7 @@ export default function Index() {
                 </div>
 
                 {/* Fixed Navigation Arrows */}
-                <div className="flex items-center justify-center md:justify-start gap-3 pt-3 sm:pt-4">
+                <div className="flex items-center justify-start gap-2 sm:gap-3 pt-2 sm:pt-3">
                   <button
                     onClick={prevFeature}
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-2 border-gray-300 flex items-center justify-center hover:border-blue-500 hover:bg-blue-50 transition-all duration-200 flex-shrink-0"
