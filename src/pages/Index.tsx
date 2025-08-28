@@ -143,7 +143,7 @@ export default function Index() {
 
   return (
     <div ref={containerRef} className="min-h-[300vh] bg-gray-50">
-      <div className="sticky top-0 h-screen flex items-center justify-center p-2 sm:p-4 md:p-6 lg:p-8 xl:p-12">
+      <div className="sticky top-0 h-screen flex items-center justify-center p-1 sm:p-2 md:p-4 lg:p-6 xl:p-8">
         <div className="w-full max-w-[95rem] mx-auto">
           <div className="grid grid-cols-3 gap-1 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center">
             
