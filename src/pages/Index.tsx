@@ -240,13 +240,13 @@ export default function Index() {
             </div>
 
             {/* Right Column - Feature Showcase List */}
-            <div className="order-3 md:order-3 lg:order-3 col-span-1 md:col-span-2 lg:col-span-1">
-              <div className="bg-white rounded-xl border border-gray-200 p-3 sm:p-4 md:p-6 shadow-sm max-w-md md:max-w-none mx-auto">
-                <h3 className="text-base sm:text-lg md:text-xl font-semibold text-gray-900 mb-3 sm:mb-4 md:mb-6">
+            <div className="order-3 col-span-1">
+              <div className="bg-white rounded-lg border border-gray-200 p-2 sm:p-3 md:p-4 lg:p-6 shadow-sm">
+                <h3 className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 md:mb-4">
                   Feature Showcase
                 </h3>
 
-                <div className="space-y-1 md:grid md:grid-cols-2 lg:block md:gap-2 lg:space-y-1">
+                <div className="space-y-1">
                   {features.map((feature, index) => (
                     <button
                       key={feature.id}
