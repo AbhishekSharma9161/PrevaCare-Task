@@ -199,18 +199,23 @@ export default function Index() {
                 <div className="relative w-[288px] h-[588px] bg-gradient-to-b from-gray-700 via-gray-800 to-gray-900 rounded-[48px] shadow-2xl">
                   {/* Metallic shine effect on frame */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-transparent to-black/20 rounded-[48px]"></div>
-                  
+
                   {/* Screen bezel */}
                   <div className="absolute inset-[3px] bg-black rounded-[45px]">
-                    {/* Screen area */}
+                    {/* Screen area with notch cutout */}
                     <div className={`absolute inset-[2px] bg-gradient-to-br ${currentFeature.gradient} rounded-[43px] overflow-hidden transition-all duration-700 ease-in-out`}>
-                      
-                      {/* Simple front camera (no notch, just like reference) */}
-                      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-black/60 rounded-full border border-black/30"></div>
-                      
+
+                      {/* iPhone Notch - matching reference image */}
+                      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-7 bg-black rounded-b-2xl">
+                        {/* Speaker */}
+                        <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-12 h-1 bg-gray-800 rounded-full"></div>
+                        {/* Front camera */}
+                        <div className="absolute top-2 right-4 w-2 h-2 bg-gray-900 rounded-full"></div>
+                      </div>
+
                       {/* Screen reflection effect */}
                       <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent rounded-[43px]"></div>
-                      
+
                       {/* Content area */}
                       <div className="pt-16 pb-8 px-6 h-full relative z-10">
                         <div className="text-white">
@@ -222,12 +227,12 @@ export default function Index() {
                           </h3>
                         </div>
                       </div>
-                      
+
                       {/* Home indicator */}
                       <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-white/40 rounded-full"></div>
                     </div>
                   </div>
-                  
+
                   {/* Additional frame shine */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent rounded-[48px] transform rotate-45"></div>
                 </div>
