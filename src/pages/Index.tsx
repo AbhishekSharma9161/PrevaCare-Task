@@ -32,6 +32,14 @@ function makeThumb(label: string, from: string, to: string) {
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
+function gradientToColors(gradient: string): [string, string] {
+  if (gradient.includes('emerald')) return ['#10b981', '#06b6d4'];
+  if (gradient.includes('orange')) return ['#f97316', '#ef4444'];
+  if (gradient.includes('violet')) return ['#8b5cf6', '#d946ef'];
+  if (gradient.includes('blue') && gradient.includes('indigo')) return ['#3b82f6', '#8b5cf6'];
+  return ['#ec4899', '#6366f1'];
+}
+
 const features: Feature[] = [
   {
     id: 1,
@@ -289,7 +297,7 @@ export default function Index() {
                         <div className="mt-4 grid grid-cols-2 gap-3 w-full">
                           {currentFeature.thumbs.map((thumb, i) => (
                             <div key={i} className="bg-white/10 rounded-xl p-1 backdrop-blur-sm ring-1 ring-white/20">
-                              <img loading="lazy" src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" />
+                              <img loading="lazy" src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" onError={(e)=>{ const [from,to]=gradientToColors(currentFeature.gradient); e.currentTarget.src = makeThumb(thumb.label, from, to); }} />
                               <div className="text-[10px] text-white/95 mt-1 text-center truncate drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                                 {thumb.label}
                               </div>
