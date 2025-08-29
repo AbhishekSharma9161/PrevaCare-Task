@@ -86,6 +86,12 @@ const features: Feature[] = [
       "Hardware-accelerated animations for buttery smooth performance",
     ],
     gradient: "from-orange-500 via-red-500 to-pink-500",
+    thumbs: [
+      { src: makeThumb("Anim", "#fb923c", "#ef4444"), label: "Animations" },
+      { src: makeThumb("Live", "#f97316", "#f43f5e"), label: "Real-time" },
+      { src: makeThumb("Gest", "#f59e0b", "#f472b6"), label: "Gestures" },
+      { src: makeThumb("UX", "#f87171", "#fb7185"), label: "Intuitive UX" },
+    ],
   },
   {
     id: 4,
