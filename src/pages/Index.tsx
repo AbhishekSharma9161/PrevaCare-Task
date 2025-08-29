@@ -66,6 +66,12 @@ const features: Feature[] = [
       "Progressive enhancement ensuring functionality on all browsers",
     ],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
+    thumbs: [
+      { src: makeThumb("Grid", "#10b981", "#06b6d4"), label: "Fluid Grid" },
+      { src: makeThumb("Touch", "#34d399", "#22d3ee"), label: "Touch Targets" },
+      { src: makeThumb("Auto", "#2dd4bf", "#60a5fa"), label: "Auto Layout" },
+      { src: makeThumb("XS→XL", "#14b8a6", "#0ea5e9"), label: "Breakpoints" },
+    ],
   },
   {
     id: 3,
