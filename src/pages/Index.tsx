@@ -106,6 +106,12 @@ const features: Feature[] = [
       "Memory management and cleanup for long-running applications",
     ],
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
+    thumbs: [
+      { src: makeThumb("Split", "#8b5cf6", "#d946ef"), label: "Code Split" },
+      { src: makeThumb("Cache", "#7c3aed", "#e879f9"), label: "Caching" },
+      { src: makeThumb("Lazy", "#a78bfa", "#f472b6"), label: "Lazy Load" },
+      { src: makeThumb("Fast", "#6d28d9", "#db2777"), label: "Fast" },
+    ],
   },
   {
     id: 5,
