@@ -33,11 +33,12 @@ function makeThumb(label: string, from: string, to: string) {
 }
 
 function gradientToColors(gradient: string): [string, string] {
-  if (gradient.includes('emerald')) return ['#10b981', '#06b6d4'];
-  if (gradient.includes('orange')) return ['#f97316', '#ef4444'];
-  if (gradient.includes('violet')) return ['#8b5cf6', '#d946ef'];
-  if (gradient.includes('blue') && gradient.includes('indigo')) return ['#3b82f6', '#8b5cf6'];
-  return ['#ec4899', '#6366f1'];
+  if (gradient.includes("emerald")) return ["#10b981", "#06b6d4"];
+  if (gradient.includes("orange")) return ["#f97316", "#ef4444"];
+  if (gradient.includes("violet")) return ["#8b5cf6", "#d946ef"];
+  if (gradient.includes("blue") && gradient.includes("indigo"))
+    return ["#3b82f6", "#8b5cf6"];
+  return ["#ec4899", "#6366f1"];
 }
 
 const features: Feature[] = [
@@ -55,8 +56,14 @@ const features: Feature[] = [
     ],
     gradient: "from-pink-500 via-purple-500 to-indigo-500",
     thumbs: [
-      { src: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=640&q=80&auto=format&fit=crop", label: "Adaptive Typography" },
-      { src: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?w=640&q=80&auto=format&fit=crop", label: "Kerning & Spacing" },
+      {
+        src: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=640&q=80&auto=format&fit=crop",
+        label: "Adaptive Typography",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?w=640&q=80&auto=format&fit=crop",
+        label: "Kerning & Spacing",
+      },
       { src: "https://picsum.photos/seed/rtl/640/400", label: "RTL Support" },
       { src: "https://picsum.photos/seed/fonts/640/400", label: "Font System" },
     ],
@@ -75,10 +82,22 @@ const features: Feature[] = [
     ],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     thumbs: [
-      { src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=640&q=80&auto=format&fit=crop", label: "Fluid Grid" },
-      { src: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=640&q=80&auto=format&fit=crop", label: "Touch Targets" },
-      { src: "https://picsum.photos/seed/autolayout/640/400", label: "Auto Layout" },
-      { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop", label: "Breakpoints" },
+      {
+        src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=640&q=80&auto=format&fit=crop",
+        label: "Fluid Grid",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=640&q=80&auto=format&fit=crop",
+        label: "Touch Targets",
+      },
+      {
+        src: "https://picsum.photos/seed/autolayout/640/400",
+        label: "Auto Layout",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop",
+        label: "Breakpoints",
+      },
     ],
   },
   {
@@ -95,10 +114,22 @@ const features: Feature[] = [
     ],
     gradient: "from-orange-500 via-red-500 to-pink-500",
     thumbs: [
-      { src: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=640&q=80&auto=format&fit=crop", label: "Animations" },
-      { src: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=640&q=80&auto=format&fit=crop", label: "Real-time" },
-      { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=640&q=80&auto=format&fit=crop", label: "Gestures" },
-      { src: "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640&q=80&auto=format&fit=crop", label: "Intuitive UX" },
+      {
+        src: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=640&q=80&auto=format&fit=crop",
+        label: "Animations",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=640&q=80&auto=format&fit=crop",
+        label: "Real-time",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=640&q=80&auto=format&fit=crop",
+        label: "Gestures",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640&q=80&auto=format&fit=crop",
+        label: "Intuitive UX",
+      },
     ],
   },
   {
@@ -115,10 +146,22 @@ const features: Feature[] = [
     ],
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
     thumbs: [
-      { src: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=640&q=80&auto=format&fit=crop", label: "Code Split" },
-      { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop", label: "Caching" },
-      { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&auto=format&fit=crop", label: "Lazy Load" },
-      { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop", label: "Fast" },
+      {
+        src: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=640&q=80&auto=format&fit=crop",
+        label: "Code Split",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop",
+        label: "Caching",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&auto=format&fit=crop",
+        label: "Lazy Load",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop",
+        label: "Fast",
+      },
     ],
   },
   {
@@ -135,10 +178,22 @@ const features: Feature[] = [
     ],
     gradient: "from-blue-500 via-indigo-500 to-purple-500",
     thumbs: [
-      { src: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=640&q=80&auto=format&fit=crop", label: "WCAG" },
-      { src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=640&q=80&auto=format&fit=crop", label: "Keyboard" },
-      { src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=640&q=80&auto=format&fit=crop", label: "Screen Readers" },
-      { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop", label: "High Contrast" },
+      {
+        src: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=640&q=80&auto=format&fit=crop",
+        label: "WCAG",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=640&q=80&auto=format&fit=crop",
+        label: "Keyboard",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=640&q=80&auto=format&fit=crop",
+        label: "Screen Readers",
+      },
+      {
+        src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop",
+        label: "High Contrast",
+      },
     ],
   },
 ];
@@ -296,8 +351,26 @@ export default function Index() {
                         {/* Dynamic thumbnails */}
                         <div className="mt-4 grid grid-cols-2 gap-3 w-full">
                           {currentFeature.thumbs.map((thumb, i) => (
-                            <div key={i} className="bg-white/10 rounded-xl p-1 backdrop-blur-sm ring-1 ring-white/20">
-                              <img loading="lazy" src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" onError={(e)=>{ const [from,to]=gradientToColors(currentFeature.gradient); e.currentTarget.src = makeThumb(thumb.label, from, to); }} />
+                            <div
+                              key={i}
+                              className="bg-white/10 rounded-xl p-1 backdrop-blur-sm ring-1 ring-white/20"
+                            >
+                              <img
+                                loading="lazy"
+                                src={thumb.src}
+                                alt={thumb.label}
+                                className="w-full h-24 object-cover rounded-md shadow-md"
+                                onError={(e) => {
+                                  const [from, to] = gradientToColors(
+                                    currentFeature.gradient,
+                                  );
+                                  e.currentTarget.src = makeThumb(
+                                    thumb.label,
+                                    from,
+                                    to,
+                                  );
+                                }}
+                              />
                               <div className="text-[10px] text-white/95 mt-1 text-center truncate drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                                 {thumb.label}
                               </div>
