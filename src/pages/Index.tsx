@@ -275,14 +275,26 @@ export default function Index() {
                       <div className="absolute inset-0 bg-gradient-to-br from-white/15 via-transparent to-transparent rounded-[43px]"></div>
 
                       {/* Content area */}
-                      <div className="pt-16 pb-8 px-6 h-full relative z-10 flex flex-col justify-start items-center">
-                        <div className="text-white">
+                      <div className="pt-16 pb-4 px-4 h-full relative z-10 flex flex-col justify-start items-center">
+                        <div className="text-white w-full">
                           <div className="text-xs font-medium mb-2 opacity-80">
                             Feature No.{currentFeature.id}
                           </div>
                           <h3 className="text-lg font-bold leading-tight">
                             {currentFeature.title}
                           </h3>
+                        </div>
+
+                        {/* Dynamic thumbnails */}
+                        <div className="mt-4 grid grid-cols-2 gap-3 w-full">
+                          {currentFeature.thumbs.map((thumb, i) => (
+                            <div key={i} className="bg-white/10 rounded-xl p-1 backdrop-blur-sm">
+                              <img src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" />
+                              <div className="text-[10px] text-white/90 mt-1 text-center truncate">
+                                {thumb.label}
+                              </div>
+                            </div>
+                          ))}
                         </div>
                       </div>
 
