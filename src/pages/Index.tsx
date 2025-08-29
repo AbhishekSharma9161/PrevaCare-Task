@@ -107,10 +107,10 @@ const features: Feature[] = [
     ],
     gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
     thumbs: [
-      { src: makeThumb("Split", "#8b5cf6", "#d946ef"), label: "Code Split" },
-      { src: makeThumb("Cache", "#7c3aed", "#e879f9"), label: "Caching" },
-      { src: makeThumb("Lazy", "#a78bfa", "#f472b6"), label: "Lazy Load" },
-      { src: makeThumb("Fast", "#6d28d9", "#db2777"), label: "Fast" },
+      { src: "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=640&q=80&auto=format&fit=crop", label: "Code Split" },
+      { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop", label: "Caching" },
+      { src: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=640&q=80&auto=format&fit=crop", label: "Lazy Load" },
+      { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=640&q=80&auto=format&fit=crop", label: "Fast" },
     ],
   },
   {
