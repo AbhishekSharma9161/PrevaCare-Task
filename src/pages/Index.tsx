@@ -87,10 +87,10 @@ const features: Feature[] = [
     ],
     gradient: "from-orange-500 via-red-500 to-pink-500",
     thumbs: [
-      { src: makeThumb("Anim", "#fb923c", "#ef4444"), label: "Animations" },
-      { src: makeThumb("Live", "#f97316", "#f43f5e"), label: "Real-time" },
-      { src: makeThumb("Gest", "#f59e0b", "#f472b6"), label: "Gestures" },
-      { src: makeThumb("UX", "#f87171", "#fb7185"), label: "Intuitive UX" },
+      { src: "https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=640&q=80&auto=format&fit=crop", label: "Animations" },
+      { src: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=640&q=80&auto=format&fit=crop", label: "Real-time" },
+      { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=640&q=80&auto=format&fit=crop", label: "Gestures" },
+      { src: "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640&q=80&auto=format&fit=crop", label: "Intuitive UX" },
     ],
   },
   {
