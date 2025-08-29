@@ -57,8 +57,8 @@ const features: Feature[] = [
     thumbs: [
       { src: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=640&q=80&auto=format&fit=crop", label: "Adaptive Typography" },
       { src: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?w=640&q=80&auto=format&fit=crop", label: "Kerning & Spacing" },
-      { src: "https://images.unsplash.com/photo-1554331544-16b6e8c7b155?w=640&q=80&auto=format&fit=crop", label: "RTL Support" },
-      { src: "https://images.unsplash.com/photo-1526244434298-88fcbcb82372?w=640&q=80&auto=format&fit=crop", label: "Font System" },
+      { src: "https://picsum.photos/seed/rtl/640/400", label: "RTL Support" },
+      { src: "https://picsum.photos/seed/fonts/640/400", label: "Font System" },
     ],
   },
   {
@@ -77,7 +77,7 @@ const features: Feature[] = [
     thumbs: [
       { src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=640&q=80&auto=format&fit=crop", label: "Fluid Grid" },
       { src: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=640&q=80&auto=format&fit=crop", label: "Touch Targets" },
-      { src: "https://images.unsplash.com/photo-1551281044-8d8e95aaaa0e?w=640&q=80&auto=format&fit=crop", label: "Auto Layout" },
+      { src: "https://picsum.photos/seed/autolayout/640/400", label: "Auto Layout" },
       { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop", label: "Breakpoints" },
     ],
   },
