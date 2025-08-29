@@ -67,10 +67,10 @@ const features: Feature[] = [
     ],
     gradient: "from-emerald-500 via-teal-500 to-cyan-500",
     thumbs: [
-      { src: makeThumb("Grid", "#10b981", "#06b6d4"), label: "Fluid Grid" },
-      { src: makeThumb("Touch", "#34d399", "#22d3ee"), label: "Touch Targets" },
-      { src: makeThumb("Auto", "#2dd4bf", "#60a5fa"), label: "Auto Layout" },
-      { src: makeThumb("XS→XL", "#14b8a6", "#0ea5e9"), label: "Breakpoints" },
+      { src: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=640&q=80&auto=format&fit=crop", label: "Fluid Grid" },
+      { src: "https://images.unsplash.com/photo-1542751110-97427bbecf20?w=640&q=80&auto=format&fit=crop", label: "Touch Targets" },
+      { src: "https://images.unsplash.com/photo-1551281044-8d8e95aaaa0e?w=640&q=80&auto=format&fit=crop", label: "Auto Layout" },
+      { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop", label: "Breakpoints" },
     ],
   },
   {
