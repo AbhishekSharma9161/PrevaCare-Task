@@ -288,9 +288,9 @@ export default function Index() {
                         {/* Dynamic thumbnails */}
                         <div className="mt-4 grid grid-cols-2 gap-3 w-full">
                           {currentFeature.thumbs.map((thumb, i) => (
-                            <div key={i} className="bg-white/10 rounded-xl p-1 backdrop-blur-sm">
-                              <img src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" />
-                              <div className="text-[10px] text-white/90 mt-1 text-center truncate">
+                            <div key={i} className="bg-white/10 rounded-xl p-1 backdrop-blur-sm ring-1 ring-white/20">
+                              <img loading="lazy" src={thumb.src} alt={thumb.label} className="w-full h-24 object-cover rounded-md shadow-md" />
+                              <div className="text-[10px] text-white/95 mt-1 text-center truncate drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                                 {thumb.label}
                               </div>
                             </div>
