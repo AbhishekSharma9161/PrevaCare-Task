@@ -46,6 +46,12 @@ const features: Feature[] = [
       "Custom font fallbacks and graceful degradation for older browsers",
     ],
     gradient: "from-pink-500 via-purple-500 to-indigo-500",
+    thumbs: [
+      { src: makeThumb("Aa", "#ec4899", "#6366f1"), label: "Adaptive Typography" },
+      { src: makeThumb("Kerning", "#a855f7", "#6366f1"), label: "Kerning & Spacing" },
+      { src: makeThumb("RTL", "#fb7185", "#8b5cf6"), label: "RTL Support" },
+      { src: makeThumb("Fonts", "#f472b6", "#60a5fa"), label: "Font System" },
+    ],
   },
   {
     id: 2,
