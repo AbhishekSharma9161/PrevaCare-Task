@@ -47,10 +47,10 @@ const features: Feature[] = [
     ],
     gradient: "from-pink-500 via-purple-500 to-indigo-500",
     thumbs: [
-      { src: makeThumb("Aa", "#ec4899", "#6366f1"), label: "Adaptive Typography" },
-      { src: makeThumb("Kerning", "#a855f7", "#6366f1"), label: "Kerning & Spacing" },
-      { src: makeThumb("RTL", "#fb7185", "#8b5cf6"), label: "RTL Support" },
-      { src: makeThumb("Fonts", "#f472b6", "#60a5fa"), label: "Font System" },
+      { src: "https://images.unsplash.com/photo-1554774853-aae0a22c8aa4?w=640&q=80&auto=format&fit=crop", label: "Adaptive Typography" },
+      { src: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?w=640&q=80&auto=format&fit=crop", label: "Kerning & Spacing" },
+      { src: "https://images.unsplash.com/photo-1554331544-16b6e8c7b155?w=640&q=80&auto=format&fit=crop", label: "RTL Support" },
+      { src: "https://images.unsplash.com/photo-1526244434298-88fcbcb82372?w=640&q=80&auto=format&fit=crop", label: "Font System" },
     ],
   },
   {
