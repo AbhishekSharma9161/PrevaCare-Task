@@ -127,10 +127,10 @@ const features: Feature[] = [
     ],
     gradient: "from-blue-500 via-indigo-500 to-purple-500",
     thumbs: [
-      { src: makeThumb("A11y", "#3b82f6", "#8b5cf6"), label: "WCAG" },
-      { src: makeThumb("Keys", "#60a5fa", "#a78bfa"), label: "Keyboard" },
-      { src: makeThumb("SR", "#2563eb", "#7c3aed"), label: "Screen Readers" },
-      { src: makeThumb("High", "#1d4ed8", "#6d28d9"), label: "High Contrast" },
+      { src: "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?w=640&q=80&auto=format&fit=crop", label: "WCAG" },
+      { src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=640&q=80&auto=format&fit=crop", label: "Keyboard" },
+      { src: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=640&q=80&auto=format&fit=crop", label: "Screen Readers" },
+      { src: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=640&q=80&auto=format&fit=crop", label: "High Contrast" },
     ],
   },
 ];
