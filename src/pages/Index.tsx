@@ -126,6 +126,12 @@ const features: Feature[] = [
       "WCAG 2.1 AA compliance with regular accessibility auditing and testing",
     ],
     gradient: "from-blue-500 via-indigo-500 to-purple-500",
+    thumbs: [
+      { src: makeThumb("A11y", "#3b82f6", "#8b5cf6"), label: "WCAG" },
+      { src: makeThumb("Keys", "#60a5fa", "#a78bfa"), label: "Keyboard" },
+      { src: makeThumb("SR", "#2563eb", "#7c3aed"), label: "Screen Readers" },
+      { src: makeThumb("High", "#1d4ed8", "#6d28d9"), label: "High Contrast" },
+    ],
   },
 ];
 
