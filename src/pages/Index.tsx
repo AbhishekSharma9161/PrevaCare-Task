@@ -1,12 +1,35 @@
 import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+interface Thumb {
+  src: string;
+  label: string;
+}
+
 interface Feature {
   id: number;
   title: string;
   description: string;
   details: string[];
   gradient: string;
+  thumbs: Thumb[];
+}
+
+function makeThumb(label: string, from: string, to: string) {
+  const svg = `<?xml version='1.0' encoding='UTF-8'?>
+  <svg xmlns='http://www.w3.org/2000/svg' width='320' height='200' viewBox='0 0 320 200'>
+    <defs>
+      <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+        <stop offset='0%' stop-color='${from}'/>
+        <stop offset='100%' stop-color='${to}'/>
+      </linearGradient>
+    </defs>
+    <rect x='0' y='0' width='320' height='200' rx='24' fill='url(#g)'/>
+    <circle cx='260' cy='40' r='20' fill='rgba(255,255,255,0.25)'/>
+    <circle cx='280' cy='60' r='10' fill='rgba(255,255,255,0.35)'/>
+    <text x='24' y='120' font-family='Inter, Arial, sans-serif' font-size='40' font-weight='700' fill='white'>${label}</text>
+  </svg>`;
+  return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
 const features: Feature[] = [
